@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       {/* How It Works — Process Flow */}
-      <section className="section section-alt" style={{ paddingTop: '48px' }}>
+      <section className="section section-alt">
         <div className="container">
           <div className="section-header">
             <span className="section-tag">How It Works</span>
