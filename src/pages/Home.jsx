@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <div className="page">
-      {/* Hero — Short & punchy with buildings bg */}
+      {/* Hero — Animated Ken Burns bg */}
       <section className="hero-fullwidth">
+        <div className="hero-kenburns-bg"></div>
         <div className="hero-fullwidth-overlay"></div>
         <div className="container hero-fullwidth-inner">
           <div className="hero-badge" id="hero-badge">
