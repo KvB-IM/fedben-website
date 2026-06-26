@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Mistakes from './pages/Mistakes'
 import Overview from './pages/Overview'
 import AboutTSP from './pages/AboutTSP'
+import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/tsp" element={<AboutTSP />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

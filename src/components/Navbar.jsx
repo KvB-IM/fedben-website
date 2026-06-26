@@ -27,6 +27,7 @@ export default function Navbar() {
     { to: '/mistakes', label: 'Top 10 Mistakes' },
     { to: '/overview', label: 'Plan Overview' },
     { to: '/tsp', label: 'About TSP' },
+    { to: '/blog', label: 'Blog' },
     { to: '/contact', label: 'Contact' },
   ]
 
