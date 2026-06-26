@@ -1,85 +1,185 @@
 import { Link } from 'react-router-dom'
 
-const features = [
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-      </svg>
-    ),
-    title: 'FEGLI Analysis',
-    desc: "Federal Employees' Group Life Insurance review and optimization to ensure your family is properly protected at the best possible cost.",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-    title: 'FERS Retirement',
-    desc: 'Federal Employees Retirement System planning to maximize your pension and annuity benefits for a comfortable retirement.',
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="1" x2="12" y2="23"></line>
-        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-      </svg>
-    ),
-    title: 'TSP Strategy',
-    desc: 'Thrift Savings Plan investment strategy to grow your retirement nest egg with the right fund allocation across G, F, C, S, I, and L funds.',
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-      </svg>
-    ),
-    title: 'Social Security',
-    desc: 'Coordination of Social Security benefits with your FERS annuity for maximum combined retirement income.',
-  },
-]
-
 export default function Overview() {
   return (
     <div className="page">
-      {/* Header — navy accent */}
+      {/* Header */}
       <section className="page-header page-header-accent">
         <div className="container">
           <span className="section-tag section-tag-light">Plan Overview</span>
-          <h1 className="page-title page-title-light">Your Complete Benefits <span className="text-gradient">Roadmap</span></h1>
-          <p className="page-subtitle page-subtitle-light">We educate employees on their benefits and keep them current on the ongoing changes, so uncertainties don't make it difficult to feel good about retirement.</p>
+          <h1 className="page-title page-title-light">Understanding Your <span className="text-gradient">Federal Benefits</span></h1>
+          <p className="page-subtitle page-subtitle-light">A comprehensive guide to FERS, FEGLI, TSP, FEHB, and Social Security — everything you need to retire with confidence.</p>
         </div>
       </section>
 
-      {/* Main Content — light bg */}
+      {/* FERS Overview — gray bg */}
       <section className="section section-alt">
         <div className="container">
-          <div className="features-layout">
-            <div className="features-content">
-              <h2 className="section-title">What We <span className="text-gradient">Help With</span></h2>
-              <p className="overview-intro">
-                Limited understanding of aspects of your benefits such as FEGLI, FERS, TSP and Social Security coupled with increasing cost of living, create a substantial income gap for many during retirement. This has placed greater responsibility on Federal Employees to prepare for retirement.
-              </p>
-              <div className="feature-list">
-                {features.map((f, i) => (
-                  <div className="feature-item" key={i} id={`feature-${i + 1}`}>
-                    <div className="feature-icon">{f.icon}</div>
-                    <div>
-                      <h3 className="feature-title">{f.title}</h3>
-                      <p className="feature-desc">{f.desc}</p>
-                    </div>
+          <div className="content-split">
+            <div className="content-text">
+              <span className="section-tag">Retirement System</span>
+              <h2 className="section-title">Federal Employees Retirement System <span className="text-gradient">(FERS)</span></h2>
+              <p className="content-paragraph">FERS is a three-tiered retirement plan for federal civilian employees hired after January 1, 1984. It provides a reliable foundation for your post-career financial security through three interconnected components.</p>
+              <div className="info-list">
+                <div className="info-item">
+                  <div className="info-icon">🏛️</div>
+                  <div>
+                    <strong>Basic Benefit Plan</strong>
+                    <p>A defined-benefit pension based on your "high-3" average salary, years of service, and a pension multiplier (1% or 1.1% if you retire at 62+ with 20+ years of service).</p>
                   </div>
-                ))}
+                </div>
+                <div className="info-item">
+                  <div className="info-icon">🔒</div>
+                  <div>
+                    <strong>Social Security</strong>
+                    <p>Standard Social Security coverage that works alongside your FERS pension to provide a second layer of guaranteed retirement income.</p>
+                  </div>
+                </div>
+                <div className="info-item">
+                  <div className="info-icon">💰</div>
+                  <div>
+                    <strong>Thrift Savings Plan (TSP)</strong>
+                    <p>A tax-advantaged defined-contribution plan similar to a 401(k), with agency matching up to 5% of your basic pay.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="features-visual">
-              <img src="/images/usps-worker.jpg" alt="Federal USPS employee at work" className="features-image" id="features-image" />
-              <div className="features-image-overlay"></div>
+            <div className="content-visual">
+              <img src="/images/retirement-planning.png" alt="Retirement planning consultation" className="content-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FERS Contribution Rates — white bg */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">Contribution Rates</span>
+            <h2 className="section-title">FERS Employee <span className="text-gradient">Contributions</span></h2>
+            <p className="section-subtitle">Your contribution rate depends on when you were hired. Understanding this helps you plan your take-home pay and retirement projections.</p>
+          </div>
+          <div className="rate-cards">
+            <div className="rate-card">
+              <div className="rate-badge">Pre-2013</div>
+              <div className="rate-number">0.8%</div>
+              <p className="rate-desc">of basic pay contributed to the FERS Basic Benefit Plan</p>
+              <span className="rate-label">FERS</span>
+            </div>
+            <div className="rate-card rate-card-highlight">
+              <div className="rate-badge">2013 Hires</div>
+              <div className="rate-number">3.1%</div>
+              <p className="rate-desc">of basic pay under the FERS-Revised Annuity Employee plan</p>
+              <span className="rate-label">FERS-RAE</span>
+            </div>
+            <div className="rate-card">
+              <div className="rate-badge">2014+</div>
+              <div className="rate-number">4.4%</div>
+              <p className="rate-desc">of basic pay under FERS-Further Revised Annuity Employee plan</p>
+              <span className="rate-label">FERS-FRAE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEGLI Section — gray bg */}
+      <section className="section section-alt">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">Life Insurance</span>
+            <h2 className="section-title">Federal Employees Group Life Insurance <span className="text-gradient">(FEGLI)</span></h2>
+            <p className="section-subtitle">FEGLI provides group term life insurance for federal employees. Understanding your options can save you thousands of dollars over your career.</p>
+          </div>
+          <div className="fegli-grid">
+            <div className="fegli-card fegli-basic">
+              <h3>Basic Insurance</h3>
+              <div className="fegli-coverage">Annual Salary + $2,000</div>
+              <p>Automatically provided unless you waive it. The government pays 1/3 of the premium and you pay 2/3 — making it very affordable.</p>
+              <div className="fegli-tag">Auto-Enrolled</div>
+            </div>
+            <div className="fegli-card">
+              <h3>Option A — Standard</h3>
+              <div className="fegli-coverage">$10,000</div>
+              <p>Flat $10,000 of additional coverage. You pay 100% of the premium. Cost is relatively low but increases with age.</p>
+            </div>
+            <div className="fegli-card fegli-warning">
+              <h3>Option B — Additional</h3>
+              <div className="fegli-coverage">1–5× Your Salary</div>
+              <p>The most common source of overpaying. Premiums increase every 5 years starting at age 35. Compare with private options to save thousands.</p>
+              <div className="fegli-tag fegli-tag-warning">⚠️ Review This</div>
+            </div>
+            <div className="fegli-card">
+              <h3>Option C — Family</h3>
+              <div className="fegli-coverage">Spouse & Children</div>
+              <p>Covers spouse up to $25,000 and each child up to $12,500. You pay 100% of the premium. Private alternatives may offer more coverage.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEHB — white bg */}
+      <section className="section">
+        <div className="container">
+          <div className="content-split content-split-reverse">
+            <div className="content-text">
+              <span className="section-tag">Health Insurance</span>
+              <h2 className="section-title">Federal Employees Health Benefits <span className="text-gradient">(FEHB)</span></h2>
+              <p className="content-paragraph">FEHB is one of the largest employer-sponsored health insurance programs in the world, offering over 200 plan choices. The government covers approximately 72% of the weighted average premium.</p>
+              <div className="info-list">
+                <div className="info-item">
+                  <div className="info-icon">🏥</div>
+                  <div>
+                    <strong>Carry Into Retirement</strong>
+                    <p>You can keep your FEHB coverage into retirement if you've been enrolled for the 5 years immediately before you retire — one of the most valuable federal benefits.</p>
+                  </div>
+                </div>
+                <div className="info-item">
+                  <div className="info-icon">📅</div>
+                  <div>
+                    <strong>Open Season Changes</strong>
+                    <p>Every year during Open Season (mid-November to mid-December), you can change your health plan, switch between Self Only, Self Plus One, and Family coverage.</p>
+                  </div>
+                </div>
+                <div className="info-item">
+                  <div className="info-icon">🔄</div>
+                  <div>
+                    <strong>Medicare Coordination</strong>
+                    <p>At age 65, you can coordinate FEHB with Medicare for comprehensive coverage. Understanding how they work together is crucial for minimizing out-of-pocket costs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-visual">
+              <img src="/images/usps-worker.jpg" alt="Federal employee" className="content-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Security — gray bg */}
+      <section className="section section-alt">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">Social Security</span>
+            <h2 className="section-title">Coordinating Social Security with <span className="text-gradient">FERS</span></h2>
+            <p className="section-subtitle">As a FERS employee, you pay into Social Security and are entitled to benefits. Knowing when to claim can mean tens of thousands of dollars in difference.</p>
+          </div>
+          <div className="ss-grid">
+            <div className="ss-card">
+              <div className="ss-age">62</div>
+              <h3>Early Retirement</h3>
+              <p>You can claim as early as 62, but your benefit is permanently reduced by up to 30%. Best if you need income immediately.</p>
+            </div>
+            <div className="ss-card ss-card-recommended">
+              <div className="ss-age">67</div>
+              <h3>Full Retirement Age</h3>
+              <p>For most FERS employees, this is when you receive 100% of your calculated benefit. The baseline for planning.</p>
+              <span className="ss-badge">Recommended</span>
+            </div>
+            <div className="ss-card">
+              <div className="ss-age">70</div>
+              <h3>Maximum Benefit</h3>
+              <p>Delaying until 70 increases your benefit by 8% per year beyond full retirement age — up to 24% more income for life.</p>
             </div>
           </div>
         </div>
@@ -96,20 +196,20 @@ export default function Overview() {
           <div className="steps-grid">
             <div className="step-card">
               <div className="step-number">1</div>
-              <h3 className="step-title">Attend a Workshop</h3>
-              <p className="step-desc">Join one of our free educational webinars to learn about common benefits mistakes and how to avoid them.</p>
+              <h3 className="step-title">Join a Webinar</h3>
+              <p className="step-desc">Attend one of our free 30-minute workshops to learn the basics of your federal benefits package.</p>
             </div>
             <div className="step-arrow">→</div>
             <div className="step-card">
               <div className="step-number">2</div>
-              <h3 className="step-title">Request Your Report</h3>
-              <p className="step-desc">We'll prepare a personalized benefits analysis covering your FEGLI, FERS, TSP, and Social Security.</p>
+              <h3 className="step-title">Get Your Free Report</h3>
+              <p className="step-desc">Receive a personalized analysis of your FEGLI, FERS, TSP, and Social Security — tailored to your situation.</p>
             </div>
             <div className="step-arrow">→</div>
             <div className="step-card">
               <div className="step-number">3</div>
-              <h3 className="step-title">Review Together</h3>
-              <p className="step-desc">Meet with a certified benefits specialist to review your report and create a plan for retirement.</p>
+              <h3 className="step-title">Review & Optimize</h3>
+              <p className="step-desc">Meet with a certified benefits specialist to review your report and implement recommendations.</p>
             </div>
           </div>
         </div>
@@ -119,8 +219,8 @@ export default function Overview() {
       <section className="section section-alt">
         <div className="container">
           <div className="page-cta">
-            <h2>Ready to Optimize Your Benefits?</h2>
-            <p>Contact us for a free, no-obligation benefits consultation and take the first step toward a secure retirement.</p>
+            <h2>Ready to Take Control of Your Benefits?</h2>
+            <p>Get a free, personalized benefits review and start planning your retirement with confidence.</p>
             <div className="page-cta-actions">
               <Link to="/contact" className="btn btn-primary btn-lg">Get Your Free Report</Link>
               <a href="tel:7064072744" className="btn btn-secondary btn-lg">Call (706) 407-2744</a>

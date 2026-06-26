@@ -75,7 +75,7 @@ export default function Mistakes() {
               <p>Below you will find ten of the most common mistakes that we see federal employees make and how to avoid them.</p>
             </div>
             <div className="mistakes-intro-image">
-              <img src="/images/what-you-dont-know.jpg" alt="What You Don't Know Can Cost You" />
+              <img src="/images/what-you-dont-know-cost.png" alt="What You Don't Know Can Cost You" />
             </div>
           </div>
         </div>
